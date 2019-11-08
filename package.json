@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon src/app.js",
-    "start": "npm run dev",
+    "start": "node src/app.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
