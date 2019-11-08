@@ -19,19 +19,6 @@ app.get('/accounts', async (req, res) => {
   }
 });
 
-// app.get('/accounts/:id', async (req, res) => {
-//   const _id = req.params.id;
-//   try {
-//     const account = await BankAccount.findById(_id);
-//     if (!account) {
-//       return res.status(404).send();
-//     }
-//     res.send(account);
-//   } catch (e) {
-//     res.status(500).send(e);
-//   }
-// });
-
 app.get('/accounts/:id/operations', async (req, res) => {
   const _id = req.params.id;
   console.log('ID : ', _id);
@@ -67,6 +54,7 @@ app.patch('/accounts/:id/operations', async (req, res) => {
     }
 
     account.operations.push(updates);
+
     const updatedAccount = await BankAccount.updateOne(
       account,
       {
