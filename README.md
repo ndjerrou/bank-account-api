@@ -6,6 +6,4 @@ To launch the Node App, use the following npm command :
 
 Before, make sure you installed the corresponding npm modules by using this command : 
 
-`npm i`
-
-This will launch an express server on port 5000 if you don't precise one
+`npm i` inside the main directory but also inside the client directory (!!)
